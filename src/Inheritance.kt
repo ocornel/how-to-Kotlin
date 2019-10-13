@@ -5,7 +5,12 @@ open class Restaurant {                     // by default in kotlin, classes are
     init {
         name = "Moriah Grilled Vegetables"
     }
-    fun show_details() {
+    open fun show_details() {                   // Functions that will be overridden later must be made open. By default they are final.
+        println("Name $name")
+    }
+
+    fun final_function() {
+        // this won't be overridden.
         println("Name $name")
     }
 }
